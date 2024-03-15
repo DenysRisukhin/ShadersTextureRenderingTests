@@ -149,7 +149,7 @@ bool HelloWorld::init()
 
     auto menu = Menu::create(itemPrev, itemNext, nullptr);
     menu->alignItemsHorizontally();
-    menu->setScale(0.5);
+    //menu->setScale(0.5);
     menu->setAnchorPoint(Vec2(0,0));
     menu->setPosition(Vec2(s.width/2,70));
     addChild(menu);

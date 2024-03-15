@@ -9,7 +9,7 @@
 #include "EffectSprite.h"
 
 bool EffectNoise::init() {
-    initGLProgramState("Shaders/example_Noisy.fsh");
+    initGLProgramState("Shaders/Noisy.fsh");
     return true;
 }
 

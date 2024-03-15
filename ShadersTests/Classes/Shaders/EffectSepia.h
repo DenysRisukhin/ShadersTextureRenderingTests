@@ -17,7 +17,7 @@ public:
 
 protected:
     bool init() {
-        initGLProgramState("Shaders/example_Sepia.fsh");
+        initGLProgramState("Shaders/Sepia.fsh");
         return true;
     }
 };

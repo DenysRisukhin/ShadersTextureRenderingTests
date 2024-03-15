@@ -17,7 +17,7 @@ public:
 
 protected:
     bool init() {
-        initGLProgramState("Shaders/example_GreyScale.fsh");
+        initGLProgramState("Shaders/GreyScale.fsh");
         return true;
     }
 };

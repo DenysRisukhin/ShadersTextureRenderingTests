@@ -25,11 +25,8 @@ void EffectBlur::setTarget(EffectSprite *sprite)
 
 bool EffectBlur::init(float blurRadius, float sampleNum)
 {
-#if (CC_TARGET_PLATFORM != CC_PLATFORM_WINRT)
-    initGLProgramState("Shaders/example_Blur.fsh");
-#else
-    initGLProgramState("Shaders/example_Blur_winrt.fsh");
-#endif
+    initGLProgramState("Shaders/Blur.fsh");
+
     _blurRadius = blurRadius;
     _blurSampleNum = sampleNum;
     

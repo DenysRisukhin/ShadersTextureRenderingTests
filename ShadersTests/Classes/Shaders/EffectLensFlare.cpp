@@ -10,7 +10,7 @@
 
 bool EffectLensFlare::init()
 {
-    initGLProgramState("Shaders/example_LensFlare.fsh");
+    initGLProgramState("Shaders/LensFlare.fsh");
     return true;
 }
 

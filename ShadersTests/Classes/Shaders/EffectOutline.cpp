@@ -11,7 +11,7 @@ USING_NS_CC;
 
 bool EffectOutline::init()
 {
-    initGLProgramState("Shaders/example_Outline.fsh");
+    initGLProgramState("Shaders/Outline.fsh");
 
     Vec3 color(1.0f, 0.2f, 0.3f);
     GLfloat radius = 0.01f;

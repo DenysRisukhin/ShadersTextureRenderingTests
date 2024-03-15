@@ -10,7 +10,7 @@
 
 bool EffectCelShading::init()
 {
-    initGLProgramState("Shaders/example_CelShading.fsh");
+    initGLProgramState("Shaders/CelShading.fsh");
     return true;
 }
 

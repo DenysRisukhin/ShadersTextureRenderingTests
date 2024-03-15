@@ -10,7 +10,7 @@
 
 bool EffectBloom::init()
 {
-    initGLProgramState("Shaders/example_Bloom.fsh");
+    initGLProgramState("Shaders/Bloom.fsh");
     return true;
 }
 

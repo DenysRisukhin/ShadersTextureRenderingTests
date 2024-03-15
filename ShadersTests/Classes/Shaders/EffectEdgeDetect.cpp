@@ -9,7 +9,7 @@
 #include "EffectSprite.h"
 
 bool EffectEdgeDetect::init() {
-    initGLProgramState("Shaders/example_EdgeDetection.fsh");
+    initGLProgramState("Shaders/EdgeDetection.fsh");
     return true;
 }
 
