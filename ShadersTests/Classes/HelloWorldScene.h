@@ -26,6 +26,8 @@
 #define __HELLOWORLD_SCENE_H__
 
 #include "cocos2d.h"
+#include "Effect.h"
+#include "EffectSprite.h"
 
 class HelloWorld : public cocos2d::Scene
 {
@@ -39,6 +41,11 @@ public:
     
     // implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
+    
+private:
+    ssize_t _vectorIndex;
+    cocos2d::Vector<Effect*> _effects;
+    EffectSprite *_sprite;
 };
 
 #endif // __HELLOWORLD_SCENE_H__

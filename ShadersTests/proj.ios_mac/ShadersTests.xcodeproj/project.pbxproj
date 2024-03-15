@@ -46,6 +46,38 @@
 		521A8EAA19F11F5000D177D7 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 521A8EA819F11F5000D177D7 /* fonts */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
 		8262943E1AAF051F00CB7CF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8262943D1AAF051F00CB7CF7 /* Security.framework */; };
+		9642DCC02BA3A43300CF8254 /* EffectSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9642DCBE2BA3A43300CF8254 /* EffectSprite.cpp */; };
+		9642DCC12BA3A43300CF8254 /* EffectSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9642DCBE2BA3A43300CF8254 /* EffectSprite.cpp */; };
+		9642DCC42BA3A44300CF8254 /* Effect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9642DCC22BA3A44300CF8254 /* Effect.cpp */; };
+		9642DCC52BA3A44300CF8254 /* Effect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9642DCC22BA3A44300CF8254 /* Effect.cpp */; };
+		96F038912BA3A71E00AC392C /* EffectBluer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F0388F2BA3A71E00AC392C /* EffectBluer.cpp */; };
+		96F038922BA3A71E00AC392C /* EffectBluer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F0388F2BA3A71E00AC392C /* EffectBluer.cpp */; };
+		96F038972BA3A7FE00AC392C /* EffectOutline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038952BA3A7FE00AC392C /* EffectOutline.cpp */; };
+		96F038982BA3A7FE00AC392C /* EffectOutline.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038952BA3A7FE00AC392C /* EffectOutline.cpp */; };
+		96F0389B2BA3A9A600AC392C /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F0389A2BA3A9A500AC392C /* monster.png */; };
+		96F0389C2BA3A9A600AC392C /* monster.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F0389A2BA3A9A500AC392C /* monster.png */; };
+		96F0389F2BA46B6900AC392C /* Shaders3D in Resources */ = {isa = PBXBuildFile; fileRef = 96F0389D2BA46B6900AC392C /* Shaders3D */; };
+		96F038A02BA46B6900AC392C /* Shaders3D in Resources */ = {isa = PBXBuildFile; fileRef = 96F0389D2BA46B6900AC392C /* Shaders3D */; };
+		96F038A12BA46B6900AC392C /* Shaders in Resources */ = {isa = PBXBuildFile; fileRef = 96F0389E2BA46B6900AC392C /* Shaders */; };
+		96F038A22BA46B6900AC392C /* Shaders in Resources */ = {isa = PBXBuildFile; fileRef = 96F0389E2BA46B6900AC392C /* Shaders */; };
+		96F038A52BA4707000AC392C /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F038A32BA4707000AC392C /* arrow_left.png */; };
+		96F038A62BA4707000AC392C /* arrow_left.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F038A32BA4707000AC392C /* arrow_left.png */; };
+		96F038A72BA4707000AC392C /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F038A42BA4707000AC392C /* arrow_right.png */; };
+		96F038A82BA4707000AC392C /* arrow_right.png in Resources */ = {isa = PBXBuildFile; fileRef = 96F038A42BA4707000AC392C /* arrow_right.png */; };
+		96F038AB2BA4746300AC392C /* EffectNoise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038A92BA4746300AC392C /* EffectNoise.cpp */; };
+		96F038AC2BA4746300AC392C /* EffectNoise.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038A92BA4746300AC392C /* EffectNoise.cpp */; };
+		96F038AF2BA4747700AC392C /* EffectEdgeDetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038AD2BA4747700AC392C /* EffectEdgeDetect.cpp */; };
+		96F038B02BA4747700AC392C /* EffectEdgeDetect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038AD2BA4747700AC392C /* EffectEdgeDetect.cpp */; };
+		96F038B32BA4748700AC392C /* EffectGreyScale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038B12BA4748700AC392C /* EffectGreyScale.cpp */; };
+		96F038B42BA4748700AC392C /* EffectGreyScale.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038B12BA4748700AC392C /* EffectGreyScale.cpp */; };
+		96F038B72BA4749700AC392C /* EffectSepia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038B52BA4749700AC392C /* EffectSepia.cpp */; };
+		96F038B82BA4749700AC392C /* EffectSepia.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038B52BA4749700AC392C /* EffectSepia.cpp */; };
+		96F038BB2BA474B600AC392C /* EffectBloom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038B92BA474B600AC392C /* EffectBloom.cpp */; };
+		96F038BC2BA474B600AC392C /* EffectBloom.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038B92BA474B600AC392C /* EffectBloom.cpp */; };
+		96F038BF2BA474CA00AC392C /* EffectCelShading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038BD2BA474CA00AC392C /* EffectCelShading.cpp */; };
+		96F038C02BA474CA00AC392C /* EffectCelShading.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038BD2BA474CA00AC392C /* EffectCelShading.cpp */; };
+		96F038C32BA474DF00AC392C /* EffectLensFlare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038C12BA474DF00AC392C /* EffectLensFlare.cpp */; };
+		96F038C42BA474DF00AC392C /* EffectLensFlare.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 96F038C12BA474DF00AC392C /* EffectLensFlare.cpp */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
@@ -133,6 +165,33 @@
 		521A8EA819F11F5000D177D7 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9642DCBE2BA3A43300CF8254 /* EffectSprite.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectSprite.cpp; sourceTree = "<group>"; };
+		9642DCC22BA3A44300CF8254 /* Effect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Effect.cpp; sourceTree = "<group>"; };
+		9642DCC62BA3A4C700CF8254 /* Effect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Effect.h; sourceTree = "<group>"; };
+		9642DCC72BA3A4E100CF8254 /* EffectSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectSprite.h; sourceTree = "<group>"; };
+		96F0388F2BA3A71E00AC392C /* EffectBluer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectBluer.cpp; sourceTree = "<group>"; };
+		96F038942BA3A76000AC392C /* EffectBluer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectBluer.h; sourceTree = "<group>"; };
+		96F038952BA3A7FE00AC392C /* EffectOutline.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectOutline.cpp; sourceTree = "<group>"; };
+		96F038992BA3A81C00AC392C /* EffectOutline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectOutline.h; sourceTree = "<group>"; };
+		96F0389A2BA3A9A500AC392C /* monster.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = monster.png; sourceTree = "<group>"; };
+		96F0389D2BA46B6900AC392C /* Shaders3D */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shaders3D; sourceTree = "<group>"; };
+		96F0389E2BA46B6900AC392C /* Shaders */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Shaders; sourceTree = "<group>"; };
+		96F038A32BA4707000AC392C /* arrow_left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_left.png; sourceTree = "<group>"; };
+		96F038A42BA4707000AC392C /* arrow_right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_right.png; sourceTree = "<group>"; };
+		96F038A92BA4746300AC392C /* EffectNoise.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectNoise.cpp; sourceTree = "<group>"; };
+		96F038AD2BA4747700AC392C /* EffectEdgeDetect.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectEdgeDetect.cpp; sourceTree = "<group>"; };
+		96F038B12BA4748700AC392C /* EffectGreyScale.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectGreyScale.cpp; sourceTree = "<group>"; };
+		96F038B52BA4749700AC392C /* EffectSepia.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectSepia.cpp; sourceTree = "<group>"; };
+		96F038B92BA474B600AC392C /* EffectBloom.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectBloom.cpp; sourceTree = "<group>"; };
+		96F038BA2BA474B600AC392C /* EffectBloom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EffectBloom.h; sourceTree = "<group>"; };
+		96F038BD2BA474CA00AC392C /* EffectCelShading.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectCelShading.cpp; sourceTree = "<group>"; };
+		96F038C12BA474DF00AC392C /* EffectLensFlare.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = EffectLensFlare.cpp; sourceTree = "<group>"; };
+		96F038C52BA4759C00AC392C /* EffectLensFlare.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectLensFlare.h; sourceTree = "<group>"; };
+		96F038C62BA4759C00AC392C /* EffectGreyScale.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectGreyScale.h; sourceTree = "<group>"; };
+		96F038C72BA4759C00AC392C /* EffectCelShading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectCelShading.h; sourceTree = "<group>"; };
+		96F038C82BA4759C00AC392C /* EffectNoise.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectNoise.h; sourceTree = "<group>"; };
+		96F038C92BA4759C00AC392C /* EffectSepia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectSepia.h; sourceTree = "<group>"; };
+		96F038CA2BA4759C00AC392C /* EffectEdgeDetect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EffectEdgeDetect.h; sourceTree = "<group>"; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -272,6 +331,11 @@
 				3EACC98E19EE6D4300EB3C5E /* res */,
 				46880B7619C43A67006E1F66 /* CloseNormal.png */,
 				46880B7719C43A67006E1F66 /* CloseSelected.png */,
+				96F0389E2BA46B6900AC392C /* Shaders */,
+				96F0389D2BA46B6900AC392C /* Shaders3D */,
+				96F0389A2BA3A9A500AC392C /* monster.png */,
+				96F038A32BA4707000AC392C /* arrow_left.png */,
+				96F038A42BA4707000AC392C /* arrow_right.png */,
 				46880B7A19C43A67006E1F66 /* HelloWorld.png */,
 			);
 			name = Resources;
@@ -281,10 +345,15 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				96F038CB2BA475B700AC392C /* Shaders */,
 				46880B8419C43A87006E1F66 /* AppDelegate.cpp */,
 				46880B8519C43A87006E1F66 /* AppDelegate.h */,
 				46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */,
 				46880B8719C43A87006E1F66 /* HelloWorldScene.h */,
+				9642DCBE2BA3A43300CF8254 /* EffectSprite.cpp */,
+				9642DCC72BA3A4E100CF8254 /* EffectSprite.h */,
+				9642DCC22BA3A44300CF8254 /* Effect.cpp */,
+				9642DCC62BA3A4C700CF8254 /* Effect.h */,
 			);
 			name = Classes;
 			path = ../Classes;
@@ -308,6 +377,31 @@
 				503AE10417EB98FF00D1A890 /* Prefix.pch */,
 			);
 			name = mac;
+			sourceTree = "<group>";
+		};
+		96F038CB2BA475B700AC392C /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				96F0388F2BA3A71E00AC392C /* EffectBluer.cpp */,
+				96F038942BA3A76000AC392C /* EffectBluer.h */,
+				96F038952BA3A7FE00AC392C /* EffectOutline.cpp */,
+				96F038992BA3A81C00AC392C /* EffectOutline.h */,
+				96F038A92BA4746300AC392C /* EffectNoise.cpp */,
+				96F038C82BA4759C00AC392C /* EffectNoise.h */,
+				96F038AD2BA4747700AC392C /* EffectEdgeDetect.cpp */,
+				96F038CA2BA4759C00AC392C /* EffectEdgeDetect.h */,
+				96F038B12BA4748700AC392C /* EffectGreyScale.cpp */,
+				96F038C62BA4759C00AC392C /* EffectGreyScale.h */,
+				96F038C12BA474DF00AC392C /* EffectLensFlare.cpp */,
+				96F038C52BA4759C00AC392C /* EffectLensFlare.h */,
+				96F038B52BA4749700AC392C /* EffectSepia.cpp */,
+				96F038C92BA4759C00AC392C /* EffectSepia.h */,
+				96F038B92BA474B600AC392C /* EffectBloom.cpp */,
+				96F038BA2BA474B600AC392C /* EffectBloom.h */,
+				96F038BD2BA474CA00AC392C /* EffectCelShading.cpp */,
+				96F038C72BA4759C00AC392C /* EffectCelShading.h */,
+			);
+			path = Shaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -417,13 +511,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F038A72BA4707000AC392C /* arrow_right.png in Resources */,
+				96F038A12BA46B6900AC392C /* Shaders in Resources */,
 				46880B8119C43A67006E1F66 /* HelloWorld.png in Resources */,
 				1A88B2641FC3D9C9005C14AE /* Images.xcassets in Resources */,
+				96F0389B2BA3A9A600AC392C /* monster.png in Resources */,
 				46880B7D19C43A67006E1F66 /* CloseSelected.png in Resources */,
 				521A8EA919F11F5000D177D7 /* fonts in Resources */,
+				96F038A52BA4707000AC392C /* arrow_left.png in Resources */,
 				3EACC98F19EE6D4300EB3C5E /* res in Resources */,
 				1AF87B891F6F781D007BE51C /* LaunchScreenBackground.png in Resources */,
 				46880B7B19C43A67006E1F66 /* CloseNormal.png in Resources */,
+				96F0389F2BA46B6900AC392C /* Shaders3D in Resources */,
 				1AF87B881F6F781D007BE51C /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -432,11 +531,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F038A82BA4707000AC392C /* arrow_right.png in Resources */,
+				96F038A62BA4707000AC392C /* arrow_left.png in Resources */,
+				96F038A22BA46B6900AC392C /* Shaders in Resources */,
 				46880B8219C43A67006E1F66 /* HelloWorld.png in Resources */,
 				503AE0F817EB97AB00D1A890 /* Icon.icns in Resources */,
+				96F038A02BA46B6900AC392C /* Shaders3D in Resources */,
 				3EACC99019EE6D4300EB3C5E /* res in Resources */,
 				521A8EAA19F11F5000D177D7 /* fonts in Resources */,
 				46880B7C19C43A67006E1F66 /* CloseNormal.png in Resources */,
+				96F0389C2BA3A9A600AC392C /* monster.png in Resources */,
 				46880B7E19C43A67006E1F66 /* CloseSelected.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -448,11 +552,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F038BF2BA474CA00AC392C /* EffectCelShading.cpp in Sources */,
+				96F038AF2BA4747700AC392C /* EffectEdgeDetect.cpp in Sources */,
 				1AF87B781F6F77F7007BE51C /* AppController.mm in Sources */,
+				96F038BB2BA474B600AC392C /* EffectBloom.cpp in Sources */,
 				1AF87B8B1F6F782A007BE51C /* RootViewController.mm in Sources */,
+				96F038972BA3A7FE00AC392C /* EffectOutline.cpp in Sources */,
+				96F038B32BA4748700AC392C /* EffectGreyScale.cpp in Sources */,
+				96F038AB2BA4746300AC392C /* EffectNoise.cpp in Sources */,
+				9642DCC42BA3A44300CF8254 /* Effect.cpp in Sources */,
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
 				1AF87B8A1F6F7822007BE51C /* main.m in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
+				96F038B72BA4749700AC392C /* EffectSepia.cpp in Sources */,
+				96F038C32BA474DF00AC392C /* EffectLensFlare.cpp in Sources */,
+				9642DCC02BA3A43300CF8254 /* EffectSprite.cpp in Sources */,
+				96F038912BA3A71E00AC392C /* EffectBluer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -460,8 +575,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96F038B42BA4748700AC392C /* EffectGreyScale.cpp in Sources */,
+				9642DCC52BA3A44300CF8254 /* Effect.cpp in Sources */,
+				96F038922BA3A71E00AC392C /* EffectBluer.cpp in Sources */,
+				96F038C02BA474CA00AC392C /* EffectCelShading.cpp in Sources */,
+				96F038982BA3A7FE00AC392C /* EffectOutline.cpp in Sources */,
+				96F038B82BA4749700AC392C /* EffectSepia.cpp in Sources */,
+				96F038AC2BA4746300AC392C /* EffectNoise.cpp in Sources */,
+				96F038C42BA474DF00AC392C /* EffectLensFlare.cpp in Sources */,
+				96F038B02BA4747700AC392C /* EffectEdgeDetect.cpp in Sources */,
 				46880B8919C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				9642DCC12BA3A43300CF8254 /* EffectSprite.cpp in Sources */,
 				503AE10517EB98FF00D1A890 /* main.cpp in Sources */,
+				96F038BC2BA474B600AC392C /* EffectBloom.cpp in Sources */,
 				46880B8B19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

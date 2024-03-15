@@ -25,6 +25,16 @@
 #include "HelloWorldScene.h"
 #include "SimpleAudioEngine.h"
 
+#include "EffectBluer.h"
+#include "EffectOutline.h"
+#include "EffectNoise.h"
+#include "EffectEdgeDetect.h"
+#include "EffectGreyScale.h"
+#include "EffectLensFlare.h"
+#include "EffectBloom.h"
+#include "EffectCelShading.h"
+#include "EffectSepia.h"
+
 USING_NS_CC;
 
 Scene* HelloWorld::createScene()
@@ -55,6 +65,9 @@ bool HelloWorld::init()
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
     //    you may modify it.
+    
+    auto layer = LayerColor::create(Color4B::BLUE);
+    addChild(layer);
 
     // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = MenuItemImage::create(
@@ -75,10 +88,10 @@ bool HelloWorld::init()
         closeItem->setPosition(Vec2(x,y));
     }
 
-    // create menu, it's an autorelease object
-    auto menu = Menu::create(closeItem, NULL);
-    menu->setPosition(Vec2::ZERO);
-    this->addChild(menu, 1);
+//    // create menu, it's an autorelease object
+//    auto menu = Menu::create(closeItem, NULL);
+//    menu->setPosition(Vec2::ZERO);
+//    this->addChild(menu, 1);
 
     /////////////////////////////
     // 3. add your codes below...
@@ -86,7 +99,7 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
 
-    auto label = Label::createWithTTF("Hello World", "fonts/Marker Felt.ttf", 24);
+    auto label = Label::createWithTTF("Shaders Portfolio \n TESTED BY DENYS RISUKHIN", "fonts/Marker Felt.ttf", 24, Size::ZERO, TextHAlignment::CENTER, TextVAlignment::CENTER);
     if (label == nullptr)
     {
         problemLoading("'fonts/Marker Felt.ttf'");
@@ -102,19 +115,72 @@ bool HelloWorld::init()
     }
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
-    if (sprite == nullptr)
+    _sprite = EffectSprite::create("monster.png");
+    if (_sprite == nullptr)
     {
-        problemLoading("'HelloWorld.png'");
+        problemLoading("'monster.png'");
     }
     else
     {
         // position the sprite on the center of the screen
-        sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+        _sprite->setPosition(Vec2(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
         // add the sprite as a child to this layer
-        this->addChild(sprite, 0);
+        addChild(_sprite, 0);
     }
+
+    auto s = Director::getInstance()->getWinSize();
+
+    auto itemPrev = MenuItemImage::create("arrow_left.png", "arrow_left.png",
+                                      [&](Ref *sender) {
+                                          _vectorIndex--;
+                                          if(_vectorIndex<0)
+                                              _vectorIndex = _effects.size()-1;
+                                          _sprite->setEffect(_effects.at(_vectorIndex));
+                                      });
+
+    auto itemNext = MenuItemImage::create("arrow_right.png", "arrow_right.png",
+                                      [&](Ref *sender) {
+                                          _vectorIndex++;
+                                          if(_vectorIndex>=_effects.size())
+                                              _vectorIndex = 0;
+                                          _sprite->setEffect(_effects.at(_vectorIndex));
+                                      });
+
+    auto menu = Menu::create(itemPrev, itemNext, nullptr);
+    menu->alignItemsHorizontally();
+    menu->setScale(0.5);
+    menu->setAnchorPoint(Vec2(0,0));
+    menu->setPosition(Vec2(s.width/2,70));
+    addChild(menu);
+
+//    _sprite = EffectSprite::create("Images/grossini.png");
+//    _sprite->setPosition(Vec2(0, s.height/2));
+//    addChild(_sprite);
+
+//    auto jump = JumpBy::create(4, Vec2(s.width,0), 100, 4);
+//    auto rot = RotateBy::create(4, 720);
+//    auto spawn = Spawn::create(jump, rot, nullptr);
+//    auto rev = spawn->reverse();
+//    auto seq = Sequence::create(spawn, rev, nullptr);
+//    auto repeat = RepeatForever::create(seq);
+//    _sprite->runAction(repeat);
+
+    // set the Effects
+    _effects.pushBack(EffectBlur::create());
+    _effects.pushBack(EffectOutline::create());
+    _effects.pushBack(EffectNoise::create());
+    _effects.pushBack(EffectEdgeDetect::create());
+    _effects.pushBack(EffectGreyScale::create());
+    _effects.pushBack(EffectSepia::create());
+    _effects.pushBack(EffectBloom::create());
+    _effects.pushBack(EffectCelShading::create());
+    _effects.pushBack(EffectLensFlare::create());
+
+    _vectorIndex = 0;
+    _sprite->setEffect( _effects.at(_vectorIndex) );
+    
+    
     return true;
 }
 
@@ -128,6 +194,4 @@ void HelloWorld::menuCloseCallback(Ref* pSender)
 
     //EventCustom customEndEvent("game_scene_close_event");
     //_eventDispatcher->dispatchEvent(&customEndEvent);
-
-
 }
