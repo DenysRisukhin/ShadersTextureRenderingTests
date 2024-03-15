@@ -29,7 +29,7 @@
 #include "Effect.h"
 #include "EffectSprite.h"
 
-class HelloWorld : public cocos2d::Scene
+class EffectSpriteTestScene : public cocos2d::Scene
 {
 public:
     static cocos2d::Scene* createScene();
@@ -40,7 +40,11 @@ public:
     void menuCloseCallback(cocos2d::Ref* pSender);
     
     // implement the "static create()" method manually
-    CREATE_FUNC(HelloWorld);
+    CREATE_FUNC(EffectSpriteTestScene);
+    
+private:
+    void spriteEffects();
+    void effectSpriteLamp();
     
 private:
     ssize_t _vectorIndex;
