@@ -15,6 +15,12 @@
 
 USING_NS_CC;
 
+enum
+{
+    SIZE_X = 256,
+    SIZE_Y = 256,
+};
+
 
 static int tuple_sort( const std::tuple<ssize_t,Effect*,QuadCommand> &tuple1, const std::tuple<ssize_t,Effect*,QuadCommand> &tuple2 )
 {

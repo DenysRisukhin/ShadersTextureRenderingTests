@@ -23,7 +23,7 @@ EffectNormalMapped* EffectNormalMapped::create(const std::string&normalMapFileNa
 bool EffectNormalMapped::init()
 {
     initGLProgramState("Shaders3D/Normal.frag");
-    _kBump = 2;
+    m_kBump = 2;
     return true;
 }
 bool EffectNormalMapped::initNormalMap(const std::string& normalMapFileName)
@@ -35,29 +35,40 @@ bool EffectNormalMapped::initNormalMap(const std::string& normalMapFileName)
 void EffectNormalMapped::setTarget(EffectSprite* sprite)
 {
     _sprite = sprite;
-    getGLProgramState()->setUniformFloat("u_kBump", _kBump);
+    getGLProgramState()->setUniformFloat("u_kBump", m_kBump);
     getGLProgramState()->setUniformVec2("u_contentSize", Vec2(sprite->getContentSize().width,sprite->getContentSize().height));
 }
 
 void EffectNormalMapped::setKBump(float value)
 {
-    _kBump = value;
+    m_kBump = value;
     auto glProgramState = getGLProgramState();
-    if(glProgramState) glProgramState->setUniformFloat("u_kBump", _kBump);
+    
+    if (glProgramState)
+    {
+        glProgramState->setUniformFloat("u_kBump", m_kBump);
+    }
 }
 
 void EffectNormalMapped::setLightPos(const Vec3& pos)
 {
-    _lightPos = pos;
+    m_lightPos = pos;
     auto glProgramState = getGLProgramState();
-    if(glProgramState) glProgramState->setUniformVec4("u_lightPosInLocalSpace", Vec4(_lightPos.x,_lightPos.y,_lightPos.z,1));
+    
+    if (glProgramState)
+    {
+        glProgramState->setUniformVec4("u_lightPosInLocalSpace", Vec4(m_lightPos.x,m_lightPos.y,m_lightPos.z,1));
+    }
     
 }
 
 void EffectNormalMapped::setLightColor(const Color4F& color)
 {
-    _lightColor = color;
+    m_lightColor = color;
     auto glProgramState = getGLProgramState();
-    if(glProgramState) getGLProgramState()->setUniformVec3("u_diffuseL", Vec3(_lightColor.r,_lightColor.g,_lightColor.b));
     
+    if (glProgramState)
+    {
+        getGLProgramState()->setUniformVec3("u_diffuseL", Vec3(m_lightColor.r,m_lightColor.g,m_lightColor.b));
+    }
 }

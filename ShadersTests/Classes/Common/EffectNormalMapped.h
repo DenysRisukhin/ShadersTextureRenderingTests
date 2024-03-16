@@ -16,12 +16,13 @@ class EffectNormalMapped : public Effect
 {
 public:
     CREATE_FUNC(EffectNormalMapped);
-    static EffectNormalMapped* create(const std::string&normalMapFileName);
+    static EffectNormalMapped* create(const std::string& normalMapFileName);
 
     void setKBump(float value);
     void setLightPos(const Vec3& pos);
     void setLightColor(const Color4F& color);
-    float getKBump()const{return _kBump;}
+    
+    float getKBump() const { return m_kBump; }
     
 protected:
     bool init();
@@ -30,9 +31,9 @@ protected:
     
 protected:
     EffectSprite* _sprite;
-    Vec3 _lightPos;
-    Color4F _lightColor;
-    float  _kBump;
+    Vec3 m_lightPos;
+    Color4F m_lightColor;
+    float  m_kBump;
 };
 
 #endif /* EffectNormalMapped_h */

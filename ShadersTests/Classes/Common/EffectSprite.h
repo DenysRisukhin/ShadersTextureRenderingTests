@@ -25,6 +25,7 @@ public:
 
     void setEffect(Effect* effect);
     void addEffect(Effect* effect, ssize_t order);
+
     void draw(Renderer* renderer, const Mat4 &transform, uint32_t flags) override;
     
 protected:

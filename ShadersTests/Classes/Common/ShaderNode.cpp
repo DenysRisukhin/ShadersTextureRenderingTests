@@ -6,21 +6,12 @@
 //
 
 #include "ShaderNode.h"
-
-enum
-{
-    SIZE_X = 256,
-    SIZE_Y = 256,
-};
+#include "Common.h"
 
 ShaderNode::ShaderNode()
-    :_center(Vec2(0.0f, 0.0f))
-    ,_resolution(Vec2(0.0f, 0.0f))
-    ,_time(0.0f)
-{
-}
-
-ShaderNode::~ShaderNode()
+    : m_center(Vec2(0.0f, 0.0f))
+    , m_resolution(Vec2(0.0f, 0.0f))
+    , m_time(0.0f)
 {
 }
 
@@ -35,11 +26,13 @@ ShaderNode* ShaderNode::shaderNodeWithVertex(const std::string &vert, const std:
 
 bool ShaderNode::initWithVertex(const std::string &vert, const std::string &frag)
 {
-    _vertFileName = vert;
-    _fragFileName = frag;
+    m_vertFileName = vert;
+    m_fragFileName = frag;
+
 #if CC_ENABLE_CACHE_TEXTURE_DATA
-    auto listener = EventListenerCustom::create(EVENT_RENDERER_RECREATED, [this](EventCustom* event){
-            this->setGLProgramState(nullptr);
+    auto listener = EventListenerCustom::create(EVENT_RENDERER_RECREATED, [this](EventCustom* event)
+        {
+            setGLProgramState(nullptr);
             loadShaderVertex(_vertFileName, _fragFileName);
         });
 
@@ -48,19 +41,18 @@ bool ShaderNode::initWithVertex(const std::string &vert, const std::string &frag
 
     loadShaderVertex(vert, frag);
 
-    _time = 0;
-    _resolution = Vec2(SIZE_X, SIZE_Y);
+    m_time = 0;
+    m_resolution = Vec2(SIZE_X, SIZE_Y);
 
     scheduleUpdate();
 
     setContentSize(Size(SIZE_X, SIZE_Y));
     setAnchorPoint(Vec2(0.5f, 0.5f));
     
-
     return true;
 }
 
-void ShaderNode::loadShaderVertex(const std::string &vert, const std::string &frag)
+void ShaderNode::loadShaderVertex(const std::string& vert, const std::string& frag)
 {
     auto fileUtiles = FileUtils::getInstance();
 
@@ -70,9 +62,13 @@ void ShaderNode::loadShaderVertex(const std::string &vert, const std::string &fr
 
     // vert
     std::string vertSource;
-    if (vert.empty()) {
+    
+    if (vert.empty())
+    {
         vertSource = ccPositionTextureColor_vert;
-    } else {
+    }
+    else
+    {
         std::string vertexFilePath = fileUtiles->fullPathForFilename(vert);
         vertSource = fileUtiles->getStringFromFile(vertexFilePath);
     }
@@ -84,7 +80,7 @@ void ShaderNode::loadShaderVertex(const std::string &vert, const std::string &fr
 
 void ShaderNode::update(float dt)
 {
-    _time += dt;
+    m_time += dt;
 }
 
 void ShaderNode::setPosition(const Vec2 &newPosition)
@@ -94,7 +90,7 @@ void ShaderNode::setPosition(const Vec2 &newPosition)
     auto frameSize = Director::getInstance()->getOpenGLView()->getFrameSize();
     auto visibleSize = Director::getInstance()->getVisibleSize();
     auto retinaFactor = Director::getInstance()->getOpenGLView()->getRetinaFactor();
-    _center = Vec2(position.x * frameSize.width / visibleSize.width * retinaFactor, position.y * frameSize.height / visibleSize.height * retinaFactor);
+    m_center = Vec2(position.x * frameSize.width / visibleSize.width * retinaFactor, position.y * frameSize.height / visibleSize.height * retinaFactor);
 }
 
 void ShaderNode::draw(Renderer *renderer, const Mat4 &transform, uint32_t flags)
@@ -110,8 +106,8 @@ void ShaderNode::onDraw(const Mat4 &transform, uint32_t flags)
     GLfloat vertices[12] = {0,0, w,0, w,h, 0,0, 0,h, w,h};
 
     auto glProgramState = getGLProgramState();
-    glProgramState->setUniformVec2("resolution", _resolution);
-    glProgramState->setUniformVec2("center", _center);
+    glProgramState->setUniformVec2("resolution", m_resolution);
+    glProgramState->setUniformVec2("center", m_center);
     glProgramState->setVertexAttribPointer("a_position", 2, GL_FLOAT, GL_FALSE, 0, vertices);
 
     glProgramState->apply(transform);

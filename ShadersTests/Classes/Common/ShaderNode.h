@@ -28,18 +28,18 @@ public:
 
 protected:
     ShaderNode();
-    ~ShaderNode();
+    ~ShaderNode() {}
 
     bool initWithVertex(const std::string &vert, const std::string &frag);
     void loadShaderVertex(const std::string &vert, const std::string &frag);
 
     void onDraw(const cocos2d::Mat4& transform, uint32_t flags);
 
-    cocos2d::Vec2 _center;
-    cocos2d::Vec2 _resolution;
-    float _time;
-    std::string _vertFileName;
-    std::string _fragFileName;
+    cocos2d::Vec2 m_center;
+    cocos2d::Vec2 m_resolution;
+    float m_time;
+    std::string m_vertFileName;
+    std::string m_fragFileName;
     cocos2d::CustomCommand _customCommand;
 };
 
