@@ -12,13 +12,13 @@
 USING_NS_CC;
 
 Effect::Effect()
-    : _glprogramstate(nullptr)
+    : m_glprogramstate(nullptr)
 {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
     _backgroundListener = EventListenerCustom::create(EVENT_RENDERER_RECREATED,
                                                       [this](EventCustom*)
                                                       {
-                                                          auto glProgram = _glprogramstate->getGLProgram();
+                                                          auto glProgram = m_glprogramstate->getGLProgram();
                                                           glProgram->reset();
                                                           glProgram->initWithByteArrays(ccPositionTextureColor_noMVP_vert, _fragSource.c_str());
                                                           glProgram->link();
@@ -31,7 +31,7 @@ Effect::Effect()
 
 Effect::~Effect()
 {
-    CC_SAFE_RELEASE_NULL(_glprogramstate);
+    CC_SAFE_RELEASE_NULL(m_glprogramstate);
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
     Director::getInstance()->getEventDispatcher()->removeEventListener(_backgroundListener);
 #endif
@@ -43,15 +43,15 @@ bool Effect::initGLProgramState(const std::string &fragmentFilename)
     auto fragmentFullPath = fileUtiles->fullPathForFilename(fragmentFilename);
     auto fragSource = fileUtiles->getStringFromFile(fragmentFullPath);
     auto glprogram = GLProgram::createWithByteArrays(ccPositionTextureColor_noMVP_vert, fragSource.c_str());
-    
+
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
     _fragSource = fragSource;
 #endif
-    
-    _glprogramstate = (glprogram == nullptr ? nullptr : GLProgramState::getOrCreateWithGLProgram(glprogram));
-    CC_SAFE_RETAIN(_glprogramstate);
 
-    return _glprogramstate != nullptr;
+    m_glprogramstate = (glprogram == nullptr ? nullptr : GLProgramState::getOrCreateWithGLProgram(glprogram));
+    CC_SAFE_RETAIN(m_glprogramstate);
+
+    return m_glprogramstate != nullptr;
 }
 
 void Effect::setTarget(EffectSprite *sprite)

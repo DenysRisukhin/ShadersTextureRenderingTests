@@ -141,8 +141,3 @@ void EffectSpriteTestScene::spriteEffects()
     _vectorIndex = 0;
     _sprite->setEffect( _effects.at(_vectorIndex) );
 }
-
-void EffectSpriteTestScene::effectSpriteLamp()
-{
-    
-}

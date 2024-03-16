@@ -17,8 +17,8 @@ bool EffectOutline::init()
     GLfloat radius = 0.01f;
     GLfloat threshold = 1.75;
 
-    _glprogramstate->setUniformVec3("u_outlineColor", color);
-    _glprogramstate->setUniformFloat("u_radius", radius);
-    _glprogramstate->setUniformFloat("u_threshold", threshold);
+    m_glprogramstate->setUniformVec3("u_outlineColor", color);
+    m_glprogramstate->setUniformFloat("u_radius", radius);
+    m_glprogramstate->setUniformFloat("u_threshold", threshold);
     return true;
 }

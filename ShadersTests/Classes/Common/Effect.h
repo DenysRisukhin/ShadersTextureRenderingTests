@@ -15,19 +15,20 @@ class EffectSprite;
 class Effect : public cocos2d::Ref
 {
 public:
-    cocos2d::GLProgramState* getGLProgramState() const { return _glprogramstate; }
+    cocos2d::GLProgramState* getGLProgramState() const { return m_glprogramstate; }
     virtual void setTarget(EffectSprite *sprite);
 
 protected:
-    bool initGLProgramState(const std::string &fragmentFilename);
     Effect();
     virtual ~Effect();
     
+    bool initGLProgramState(const std::string& fragmentFilename);
+    
 protected:
-    cocos2d::GLProgramState* _glprogramstate;
+    cocos2d::GLProgramState* m_glprogramstate;
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID || CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
-    std::string _fragSource;
-    cocos2d::EventListenerCustom* _backgroundListener;
+    cocos2d::EventListenerCustom* m_backgroundListener;
+    std::string m_fragSource;
 #endif
 };
 
